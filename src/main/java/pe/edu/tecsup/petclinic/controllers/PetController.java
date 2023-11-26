@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/pet")
 public class PetController {
 
-	@GetMapping("/")
+	@GetMapping()
 	String index() {
 		
 		return "Hola Mundo";
