@@ -5,6 +5,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+//  M V C 
+
 @Controller
 public class OwnerController {
 
@@ -12,7 +14,12 @@ public class OwnerController {
 	@GetMapping("/message")
 	String message(Model model) {
 		
-		return "nuevo"; // resoures/templates/nuevo.html
+		model.addAttribute("msg", "Message from Tecsup");
+		
+		model.addAttribute("name", "Jaime");
+		
+		
+		return "message"; // resources/templates/message.html
 	}
 	
 }
